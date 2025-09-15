@@ -1,1 +1,1 @@
-# eazysore
+# eazystore
