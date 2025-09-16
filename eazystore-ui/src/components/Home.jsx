@@ -1,10 +1,12 @@
 import PageHeading from "./PageHeading";
 import ProductListing from "./ProductListing";
 import products from "../data/products";
+import developerImage from "../assets/stickers/developer.png";
+import breakImage from "../assets/stickers/break.png";
 
 export default function Home() {
     return (
-        <div className="home-container">
+        <div className="max-w-[1152px] mx-auto px-6 py-8">                 
             <PageHeading title="Explore Eazy Stickers!">
                 Add a touch of creativity to your space with our wide range of fun
                 and unique stickers. Perfect for any occasions
