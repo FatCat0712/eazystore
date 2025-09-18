@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61a8afa5-7242-410c-9066-39c0572e9953" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/EazystoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/EazystoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/dto/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/dto/ProductDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/EazystoreApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/EazystoreApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/controller/HelloController.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="32mY7XolFklJ4uxtCNUE62s3gtv" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Unnamed.executor": "Run",
+    "Application.eazystore-backend.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/projects/eazystore",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\eazystore\eazystore-backend\src\main\resources\sql" />
+      <recent name="D:\projects\eazystore\eazystore-backend\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="Application">
+          <value>
+            <map>
+              <entry key="eazystore-backend" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="eazystore-backend" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.eazybytes.eazystore.EazystoreApplication" />
+      <module name="eazystore" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61a8afa5-7242-410c-9066-39c0572e9953" name="Changes" comment="" />
+      <created>1758027048129</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1758027048129</updated>
+    </task>
+    <servers />
+  </component>
+</project>
