@@ -5,5 +5,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ContactDTO {
+public class ContactRequestDTO {
+    private String name;
+    private String email;
+    private String mobileNumber;
+    private String message;
 }
