@@ -11,7 +11,7 @@ import java.time.Instant;
 @Table(name = "products")
 @Getter
 @Setter
-public class Product {
+public class Product extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id", nullable = false)
@@ -31,16 +31,4 @@ public class Product {
 
     @Column(name = "image_url")
     private String imageUrl;
-
-    @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
-
-    @Column(name = "created_by", nullable = false)
-    private String createdBy;
-
-    @Column(name =  "updated_at")
-    private Instant updatedAt;
-
-    @Column(name = "updated_by")
-    private String updatedBy;
 }
