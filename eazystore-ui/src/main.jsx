@@ -13,6 +13,8 @@ import Cart from "./components/Cart.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import { productsLoader } from "./components/Home.jsx";
 import ProductDetail from "./components/ProductDetail.jsx";
+import { CartProvider } from "./store/cart-context.jsx";
+
 
 
 
@@ -69,7 +71,10 @@ const appRouter = createBrowserRouter(routeDefinitaions);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={appRouter} />
+    <CartProvider>
+        <RouterProvider router={appRouter} />
+    </CartProvider>
+    
     <ToastContainer
       position="top-center"
       autoClose={3000}
@@ -77,7 +82,7 @@ createRoot(document.getElementById("root")).render(
       newestOnTop={false}
       draggable
       pauseOnHover
-      theme={localStorage.getItem("theme") === "dark" ? "dark" : "light"}
+      theme={localStorage.getItem("theme") === "dark" ? "light" : "dark"}
       transition={Bounce}
     />
   </StrictMode>

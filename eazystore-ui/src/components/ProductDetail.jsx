@@ -2,16 +2,23 @@ import { faArrowLeft, faShoppingBasket, faShoppingCart } from '@fortawesome/free
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useRef, useState } from 'react'
 import { useLocation, useNavigate, Link } from 'react-router-dom'
+import { useCart } from '../store/cart-context';
 
 export default function ProductDetail() {
   const location = useLocation();
   const product = location.state?.product
   const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
+  const {addToCart} = useCart();
 
   const zoomRef = useRef(null);
   const [isHovering, setIsHovering] = useState(false);
   const [backgroundPosition, setBackgroundPosition] = useState("center");
+
+  const handleAddToCart = () => {
+     if(quantity < 1) return;
+     addToCart(product, quantity);
+  }
 
   const handleMouseMove = (e) => {
     const{left, top, width, height} = zoomRef.current.getBoundingClientRect();
@@ -93,7 +100,10 @@ export default function ProductDetail() {
                         />
                     </div>
                     {/* Add to Cart Button */}
-                    <button className="w-full px-4 py-2 bg-primary dark:bg-light text-white dark:text-black rounded-md text-lg font-semibold hover:bg-dark dark:hover:bg-lighter transition">
+                    <button 
+                        onClick={handleAddToCart}
+                        className="w-full px-4 py-2 bg-primary dark:bg-light text-white dark:text-black rounded-md text-lg font-semibold hover:bg-dark dark:hover:bg-lighter transition"
+                    >
                         Add to Cart
                         <FontAwesomeIcon icon={faShoppingCart} className="ml-2" />
                     </button>
