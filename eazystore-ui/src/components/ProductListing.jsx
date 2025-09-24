@@ -17,7 +17,7 @@ export default function ProductListing({products}) {
     }
 
     let filteredProducts = products.filter(product => 
-            product.name.toLowerCase().includes(keyword.toLowerCase()) || product.description.toLowerCase().includes(keyword.toLowerCase())
+        product.name.toLowerCase().includes(keyword.toLowerCase()) || product.description.toLowerCase().includes(keyword.toLowerCase())
     );
 
   
@@ -54,7 +54,7 @@ export default function ProductListing({products}) {
         {filteredAndSortedProducts.length > 0 ? (
             filteredAndSortedProducts.map(product => (<ProductCard key={product.productId} product={product}/>))    
         ) : (
-            <p className='text-center font-primary font-bold text-lg'>No products found</p>
+            <p className='text-center font-primary font-bold text-lg text-primary dark:text-light'>No products found</p>
         )}
       </div>
     </div>

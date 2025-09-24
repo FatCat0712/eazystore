@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageTitle from './PageTitle';
-import { Link } from 'react-router-dom';
+import { Link, Form, useActionData, useNavigation, useNavigate } from 'react-router-dom';
+import apiClient from '../api/apiClient';
+import { toast } from 'react-toastify';
 
 export default function Login() {
+    const actionData = useActionData();
+    const navigation = useNavigation();
+    const navigate = useNavigate();
+    const isSubmitting = navigation.state === "submitting";
+  
+    useEffect(() => {
+      if(actionData?.success) {
+        navigate("/home");
+      }
+      else if(actionData?.errors) {
+        toast.error(actionData.errors.message || "Login failed");
+      }
+    }, [actionData])
+
     const labelStyle =
     "block text-lg font-semibold text-primary dark:text-light mb-2";
   const textFieldStyle =
@@ -13,7 +29,7 @@ export default function Login() {
         {/* Title */}
         <PageTitle title="Login" />
         {/* Form */}
-        <form className="space-y-6">
+        <Form method='POST' className="space-y-6">
           {/* Email Field */}
           <div>
             <label htmlFor="username" className={labelStyle}>
@@ -23,6 +39,7 @@ export default function Login() {
               id="username"
               type="text"
               name="username"
+              autoComplete='username'
               placeholder="Your Username"
               required
               className={textFieldStyle}
@@ -40,7 +57,7 @@ export default function Login() {
               name="password"
               placeholder="Your Password"
               required
-              minLength={8}
+              minLength={4}
               maxLength={20}
               className={textFieldStyle}
             />
@@ -50,12 +67,13 @@ export default function Login() {
           <div>
             <button
               type="submit"
+              disabled={isSubmitting}
               className="w-full px-6 py-2 text-white dark:text-black text-xl rounded-md transition duration-200 bg-primary dark:bg-light hover:bg-dark dark:hover:bg-lighter"
             >
-              Login
+              {isSubmitting ? 'Authenticating...' : "Login"}
             </button>
           </div>
-        </form>
+        </Form>
 
         {/* Register Link */}
         <p className="text-center text-gray-600 dark:text-gray-400 mt-4">
@@ -71,3 +89,33 @@ export default function Login() {
     </div>
   )
 }
+
+export async function loginAction({request}) {
+   const data = await request.formData();
+
+  const loginData = {
+    username: data.get("username"),
+    password: data.get("password")
+  };
+
+  try {
+    const response = await apiClient.post("/auth/login", loginData);
+    const {message, user, jwtToken } = response.data;
+    return {success: true, message, user, jwtToken};
+  }
+  catch(error) {
+    if(error.response?.status === 401) {
+      return {
+        success: false,
+        errors: {message: "Invalid username or password"}
+      };
+    }
+    throw new Response(
+      error.response?.data?.message || error.message || "Failed to login. Please try again.", 
+      { status: error.response?.status || 500}
+      );
+    }
+}
+
+
+

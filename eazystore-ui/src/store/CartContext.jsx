@@ -14,9 +14,17 @@ import {
 // };
 
 
-export const CartContext = createContext();
+const CartContext = createContext();
 
-export const useCart = () => useContext(CartContext);
+const initialCartState = (() => {
+    try {
+        const storedCart = localStorage.getItem("cart");
+        return storedCart ? JSON.parse(storedCart) : [];
+    }catch(error) {
+        console.error("Failed to parse from localStorage", error);
+        return [];
+    }
+})();
 
 
 const ADD_TO_CART = "ADD_TO_CART";
@@ -29,7 +37,6 @@ const cartReducer = (prevCart, action) => {
             {
                 const {product, quantity} = action.payload;
                 const existingItem = prevCart.find(item => item.productId === product.productId);
-                console.log(existingItem);
                 if(existingItem) {
                     return prevCart.map((item) => item.productId === product.productId ? {...item, quantity: item.quantity + quantity} : item);
                 }
@@ -45,17 +52,8 @@ const cartReducer = (prevCart, action) => {
     }
 };
 
-export const CartProvider = ({children}) => {
 
-    const initialCartState = (() => {
-        try {
-          const storedCart = localStorage.getItem("cart");
-          return storedCart ? JSON.parse(storedCart) : [];
-       }catch(error) {
-          console.error("Failed to parse from localStorage", error);
-          return [];
-       }
-    })();
+const CartProvider = ({children}) => {
 
     const[cart, dispatch] = useReducer(cartReducer, initialCartState);
 
@@ -126,4 +124,16 @@ export const CartProvider = ({children}) => {
         </CartContext.Provider>
     );
 }
+
+
+
+function useCart () {
+    const context = useContext(CartContext);
+    if(context === undefined) throw new Error("CartContext was used outside the CartProvider")
+    return context;
+} 
+
+
+
+export {useCart, CartProvider};
 

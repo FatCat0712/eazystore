@@ -5,41 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61a8afa5-7242-410c-9066-39c0572e9953" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/config/AuditorAwareImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/DummyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/LoggingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/ScopeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/dto/ErrorResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/scopes/ApplicationScopedBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/scopes/RequestScopedBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/scopes/SessionScopedBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/constants/ApplicationConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/dto/LoginRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/dto/LoginResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/security/EazyStoreSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/security/PublicPathConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/util/JwtUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eazystore-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/EazystoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/EazystoreApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/ContactController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/dto/ContactRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/dto/ContactRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/entity/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/entity/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/service/impl/ContactServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/service/impl/ContactServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/config/CorsConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/EazystoreApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/EazystoreApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/controller/ContactController.class" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/controller/ContactController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/dto/ContactRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/dto/ContactRequestDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/entity/Contact.class" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/entity/Contact.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/entity/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/service/impl/ContactServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/service/impl/ContactServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/service/impl/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-ui/src/components/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/components/Contact.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/config/CorsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-ui/src/api/apiClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/api/apiClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-ui/src/components/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/components/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-ui/src/components/CartTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/components/CartTable.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eazystore-ui/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-ui/src/components/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/components/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-ui/src/components/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/components/Login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eazystore-ui/src/components/ProductCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/components/ProductCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-ui/src/components/ProductDetail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/components/ProductDetail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-ui/src/components/ProductListing.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/components/ProductListing.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eazystore-ui/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-ui/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-ui/src/store/cart-context.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -105,6 +93,9 @@
   </component>
   <component name="RunManager">
     <configuration name="eazystore-backend" type="Application" factoryName="Application">
+      <envs>
+        <env name="JWT_SECRET" value="jxgEQeXHuPq8VdbyYFNkANdudQ53Y606" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="com.eazybytes.eazystore.EazystoreApplication" />
       <module name="eazystore" />
       <method v="2">
