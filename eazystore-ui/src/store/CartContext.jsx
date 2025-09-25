@@ -16,16 +16,6 @@ import {
 
 const CartContext = createContext();
 
-const initialCartState = (() => {
-    try {
-        const storedCart = localStorage.getItem("cart");
-        return storedCart ? JSON.parse(storedCart) : [];
-    }catch(error) {
-        console.error("Failed to parse from localStorage", error);
-        return [];
-    }
-})();
-
 
 const ADD_TO_CART = "ADD_TO_CART";
 const REMOVE_FROM_CART = "REMOVE_FROM_CART";
@@ -54,6 +44,15 @@ const cartReducer = (prevCart, action) => {
 
 
 const CartProvider = ({children}) => {
+    const initialCartState = (() => {
+    try {
+        const storedCart = localStorage.getItem("cart");
+        return storedCart ? JSON.parse(storedCart) : [];
+    }catch(error) {
+        console.error("Failed to parse from localStorage", error);
+        return [];
+    }
+})();
 
     const[cart, dispatch] = useReducer(cartReducer, initialCartState);
 

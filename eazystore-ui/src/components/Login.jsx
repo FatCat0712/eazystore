@@ -3,16 +3,21 @@ import PageTitle from './PageTitle';
 import { Link, Form, useActionData, useNavigation, useNavigate } from 'react-router-dom';
 import apiClient from '../api/apiClient';
 import { toast } from 'react-toastify';
+import { useAuth } from '../store/AuthContext';
 
 export default function Login() {
     const actionData = useActionData();
     const navigation = useNavigation();
     const navigate = useNavigate();
     const isSubmitting = navigation.state === "submitting";
+    const{ loginSuccess} = useAuth();
+    const from = sessionStorage.getItem("redirectPath") || "/home";
   
     useEffect(() => {
       if(actionData?.success) {
-        navigate("/home");
+        loginSuccess(actionData.jwtToken, actionData.user);
+        sessionStorage.removeItem("redirectPath");
+        navigate(from);
       }
       else if(actionData?.errors) {
         toast.error(actionData.errors.message || "Login failed");
