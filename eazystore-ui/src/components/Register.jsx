@@ -12,11 +12,13 @@ export default function Register() {
     const submit = useSubmit();
     const isSubmitting = navigation.state === "submitting";
 
+    console.log(actionData);
 
-    useEffect(function() {
+
+    useEffect(() => {
         if(actionData?.success) {
             navigate("/login");
-            toast.success("Registration completed successfully. Try again ...");
+            toast.success("Registration completed successfully. Try login...");
         }
     }, [actionData])
 
@@ -196,12 +198,12 @@ export async function registerAction({request}) {
     }
 
     try {
-        const response = await apiClient.post("/auth/register", registerData);
+        await apiClient.post("/auth/register", registerData);
         return {success: true};
     }
     catch(error) {
         if(error.response?.status === 400) {
-            return {success: false, error: error.response?.data};
+            return {success: false, errors: error.response?.data};
         }
         throw new Response(
             error.response?.data?.errorMessage || 
