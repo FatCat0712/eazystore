@@ -27,6 +27,14 @@ import Profile, { profileAction, profileLoader } from "./components/Profile.jsx"
 import Orders from "./components/Orders.jsx";
 import Message from "./components/admin/Message.jsx";
 import Register, { registerAction } from "./components/Register.jsx";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import OrderSuccess from "./components/OrderSuccess.jsx";
+
+
+const stripePromise = loadStripe("pk_test_51SBlPLIUwr10UcrAcxL4SSHzoNujgtrvKmbLAfFJ3NgY5rf3ZStuEcvA92pnt55ka0SDR8yP5dDO3wiJvf1Xhznv00N5hjk4i1");
+
+
 
 const routeDefinitaions = createRoutesFromElements(
   <Route path="/" element={<App />} errorElement={<ErrorPage />}>
@@ -40,6 +48,7 @@ const routeDefinitaions = createRoutesFromElements(
     <Route path="/products/:productId" element={<ProductDetail />} />
     <Route element={<ProtectedRoute/>}>
       <Route path="/checkout" element={<CheckoutForm/>}/>
+      <Route path="/order-success" element={<OrderSuccess/>}/>
       <Route 
         path="/profile" 
         element={<Profile/>} 
@@ -94,21 +103,23 @@ const appRouter = createBrowserRouter(routeDefinitaions);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AuthProvider>
-       <CartProvider>
-          <RouterProvider router={appRouter} />
-       </CartProvider>
-    </AuthProvider>
-  
-    <ToastContainer
-      position="top-center"
-      autoClose={3000}
-      hideProgressBar={false}
-      newestOnTop={false}
-      draggable
-      pauseOnHover
-      theme={localStorage.getItem("theme") === "dark" ? "dark" : "light"}
-      transition={Bounce}
-    />
+    <Elements stripe={stripePromise}>
+      <AuthProvider>
+        <CartProvider>
+            <RouterProvider router={appRouter} />
+        </CartProvider>
+      </AuthProvider>
+    
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        draggable
+        pauseOnHover
+        theme={localStorage.getItem("theme") === "dark" ? "dark" : "light"}
+        transition={Bounce}
+      />
+    </Elements>
   </StrictMode>
 );
