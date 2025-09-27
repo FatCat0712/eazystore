@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61a8afa5-7242-410c-9066-39c0572e9953" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/dto/RegisterRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/src/main/java/com/eazybytes/eazystore/dto/RegisterRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/eazystore-backend/target/classes/com/eazybytes/eazystore/controller/AuthController.class" afterDir="false" />
-    </list>
+    <list default="true" id="61a8afa5-7242-410c-9066-39c0572e9953" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,22 +29,22 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Unnamed.executor": "Run",
-    "Application.eazystore-backend.executor": "Debug",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/projects/eazystore",
-    "service.view.auto.scroll.to.source": "true",
-    "settings.editor.selected.configurable": "project.propCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.eazystore-backend.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/projects/eazystore&quot;,
+    &quot;service.view.auto.scroll.to.source&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\eazystore\eazystore-backend\src\main\resources\sql" />
